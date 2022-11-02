@@ -1,9 +1,10 @@
 import { Missing_values } from "./Missing_Values.mjs";
 import { Get_Types } from "./Missing_Values.mjs";
 import PromptSync from "prompt-sync";
+import { Quiz } from "./Missing_Values.mjs";
+const prompt = PromptSync();
 
 //Taking Input from user using Prompt
-const prompt = PromptSync();
 let name = prompt("What is your Name");
 console.log("Hello", name, "Welcome to First Assingment");
 
@@ -11,8 +12,13 @@ console.log("Hello", name, "Welcome to First Assingment");
 var test_array = [11, 15, 17, 18, 19];
 Missing_values(test_array);
 
-//Create own Prototype Method
-let Checking_Array = ["Gandu Khan", 2, 5, 7, true];
-Get_Types(Checking_Array);
+// Quiz Question
+Quiz();
 
-//
+//Create own Prototype Method
+// var Checking_Array = ["Gandu Khan", 2, 5, 7, true];
+// Array.prototype.GetTypes = Get_Types();
+// console.log(Checking_Array.GetTypes);
+//Checking_Array.Findtypes();
+
+//Get_Types(Checking_Array);

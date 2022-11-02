@@ -22,6 +22,7 @@ export { Missing_values };
 
 // Function to Display all the types in an array
 function Get_Types(arr) {
+  console.log(arr);
   let Total_Types = [];
   let length = arr.length;
   for (let index = 0; index < length; index++) {
@@ -33,3 +34,35 @@ function Get_Types(arr) {
   console.log(Total_Types);
 }
 export { Get_Types };
+
+//Creating Quiz
+function Quiz() {
+  const prompt = PromptSync();
+  let score = 0;
+  let Questions = [
+    "Which one is Fruit? 1- Apple      2- Tomato     3- Potato",
+    " Whats the capital of Australia?  1- Sydney    2- Perth    3- Canberra",
+    " Whats the Birth Place of Sunny Leone? 1- India        2- Canada       3- America",
+  ];
+  let Answers = [1, 3, 2];
+  let User_Answers = [];
+
+  for (let index = 0; index < Questions.length; index++) {
+    User_Answers[index] = prompt(Questions[index]);
+    if (User_Answers[index] == Answers[index]) {
+      score += 5;
+    }
+  }
+
+  if (score >= 10) {
+    console.log(
+      "Congrations, you Passed. You scored a total of",
+      score,
+      "out of 15"
+    );
+  } else {
+    console.log("Sorry, You Failed. You scored a total of", score, "out of 15");
+  }
+}
+
+export { Quiz };

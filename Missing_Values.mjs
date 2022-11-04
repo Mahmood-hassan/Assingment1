@@ -20,21 +20,6 @@ function Missing_values(arr) {
 }
 export { Missing_values };
 
-// Function to Display all the types in an array
-function Get_Types(arr) {
-  console.log(arr);
-  let Total_Types = [];
-  let length = arr.length;
-  for (let index = 0; index < length; index++) {
-    let type = typeof arr[index];
-    if (Total_Types.indexOf(type) == -1) {
-      Total_Types.push(type);
-    }
-  }
-  console.log(Total_Types);
-}
-export { Get_Types };
-
 //Creating Quiz
 function Quiz() {
   const prompt = PromptSync();
